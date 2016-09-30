@@ -13,3 +13,5 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 $npm install
 
 $gulp watch
+
+# Awesome
