@@ -1,3 +1,6 @@
+# Overview
+This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jade) and Gulp, following MVCSS [Modular View CSS] architecture.
+
 # Resources
 MVCSS [Modular View CSS]: http://mvcss.io/
 Bootstrap (sass version): http://getbootstrap.com/css/#sass / https://www.npmjs.com/package/bootstrap-sass
