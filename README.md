@@ -21,16 +21,16 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 ## Local setup
 
 1. **Define your new project's name**
-	[proyect-name]
+	[project-name]
 
 2. **Clone this repository and unbind it** with the next line:
 	```shell
-	git clone --depth=1 git@github.com:mobomo/html-basic-template.git [proyect-name] && rm -rf [proyect-name]/.git
+	git clone --depth=1 git@github.com:mobomo/html-basic-template.git [project-name] && rm -rf [project-name]/.git
 	```
 
-2. **Go into the root of the proyect** with the next line:
+2. **Go into the root of the project** with the next line:
 	```shell
-	$ cd [proyect-name]
+	$ cd [project-name]
 	```
 
 3. **Run Composer**
