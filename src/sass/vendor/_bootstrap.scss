@@ -1,0 +1,58 @@
+// *************************************
+//
+//   Bootstrap
+//   -> Import individual modules
+//
+// *************************************
+
+
+// ----- Import modules ----- //
+
+// Configure to import Bootstrap modules per project requirements
+
+// Core variables and mixins
+@import
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins',
+
+// Reset and dependencies
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize',
+    // 'print',
+
+// Core CSS
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid',
+    // 'tables',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons',
+
+// Components
+    // 'component-animations',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons',
+    // 'breadcrumbs',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination',
+    // 'pager',
+    // 'labels',
+    // 'badges',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel',
+    // 'thumbnails',
+    // 'alerts',
+    // 'progress-bars',
+    // 'media',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels',
+    // 'responsive-embed',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells',
+    // 'close';
+
+// Utility classes
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';

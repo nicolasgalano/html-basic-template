@@ -1,0 +1,36 @@
+// *************************************
+//
+//   Base
+//   -> Tag-Level Settings
+//
+// *************************************
+
+
+// -------------------------------------
+//   Reset list style
+// -------------------------------------
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+// -------------------------------------
+//   Remove marquee from links :focus
+// -------------------------------------
+
+a, a:focus, input, input:focus {
+    outline: none;
+}
+
+
+// -------------------------------------
+//   Placeholder hide
+// -------------------------------------
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }

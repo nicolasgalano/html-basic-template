@@ -1,0 +1,269 @@
+// *************************************
+//
+//   Utility classes
+//
+// *************************************
+
+
+// -------------------------------------
+//   Flexbox columns
+// -------------------------------------
+
+.flexbox {
+  display: flex;
+}
+
+
+// -------------------------------------
+//   Circle image w/ padding
+// -------------------------------------
+
+.rounded-img {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+  img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+  }
+}
+
+
+// -------------------------------------
+//   Display
+// -------------------------------------
+
+.display--inline {
+  display: inline !important;
+}
+
+.display--block {
+  display: block !important;
+}
+
+.display--none {
+  display: none !important;
+}
+
+.display--inline-block {
+  display: inline-block !important;
+}
+
+// ----- White Space ----- //
+
+.white-space--reset {
+  white-space: normal !important;
+}
+
+// ----- Width ----- //
+
+.w--10 {
+  width: 10% !important;
+}
+
+.w--20 {
+  width: 20% !important;
+}
+
+.w--25 {
+  width: 25% !important;
+}
+
+.w--33 {
+  width: 33.333% !important;
+}
+
+.w--50 {
+  width: 50% !important;
+}
+
+.w--100 {
+  width: 100% !important;
+}
+
+// ----- Max Width ----- //
+
+.max-w--10 {
+  width: 10% !important;
+}
+
+.max-w--20 {
+  width: 20% !important;
+}
+
+.max-w--25 {
+  width: 25% !important;
+}
+
+.max-w--33 {
+  width: 33.333% !important;
+}
+
+.max-w--50 {
+  width: 50% !important;
+}
+
+.max-w--100 {
+  width: 100% !important;
+}
+
+// ----- Min Height ----- //
+
+.min-h--50 {
+  min-height: 50px !important;
+}
+
+.min-h--100 {
+  min-height: 100px !important;
+}
+
+.min-h--150 {
+  min-height: 150px !important;
+}
+
+.min-h--200 {
+  min-height: 200px !important;
+}
+
+.min-h--300 {
+  min-height: 300px !important;
+}
+
+
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+.gray {
+  color: $color-gray;
+}
+.gray-light {
+  color: $color-gray-light;
+}
+.dark-gray {
+  color: $color-gray-dark;
+}
+.green-light {
+  color: $color-green-light;
+}
+.red {
+  color: $color-red;
+}
+.black {
+  color: $color-black;
+}
+.white {
+  color: $color-white;
+}
+
+
+
+// -------------------------------------
+//   Responsive
+// -------------------------------------
+
+.img--responsive {
+  width: 100%;
+  @media screen and (min-width: $screen-xs-min) {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+.pull-left--sm-min {
+  @media screen and (min-width: $screen-sm-min) {
+    float: left;
+  }
+}
+
+.pull-right--sm-min {
+  @media screen and (min-width: $screen-sm-min) {
+    float: right;
+  }
+}
+
+.text-left--sm-min {
+  @media screen and (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+}
+
+.text-right--sm-min {
+  @media screen and (min-width: $screen-sm-min) {
+    text-align: right;
+  }
+}
+
+.text-right--lg-min {
+  @media screen and (min-width: $screen-lg-min) {
+    text-align: right;
+  }
+}
+
+
+// -------------------------------------
+//   Margin & Padding
+// -------------------------------------
+
+// ----- Margin auto - X axis ----- //
+
+.m-x-auto {
+  margin-right: auto !important;
+  margin-left:  auto !important;
+}
+
+// ----- Margin & Padding ----- //
+// ----- (from Bootstrap 4 --> .m-t-5 / .p-l-1 / .m-x-0 / .m-x-auto) -----  //
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $lengths in $spacers {
+    $length-x:   map-get($lengths, x);
+    $length-y:   map-get($lengths, y);
+
+    .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
+    .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
+    .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
+    .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
+    .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
+
+    // Axes
+    .#{$abbrev}-x-#{$size} {
+      #{$prop}-right:  $length-x !important;
+      #{$prop}-left:   $length-x !important;
+    }
+    .#{$abbrev}-y-#{$size} {
+      #{$prop}-top:    $length-y !important;
+      #{$prop}-bottom: $length-y !important;
+    }
+  }
+}
+
+
+
+
+// -------------------------------------
+//   Positioning
+// -------------------------------------
+
+
+// ----- Fixed at Top ----- //
+
+.pos-f-t {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-navbar-fixed;
+}

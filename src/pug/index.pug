@@ -1,0 +1,61 @@
+include partials/head
+
+body
+    include partials/header
+
+
+    // SLIDER full width
+    .container-fluid
+        #myCarousel.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#myCarousel', data-slide-to='0')
+                li(data-target='#myCarousel', data-slide-to='1')
+                li(data-target='#myCarousel', data-slide-to='2')
+            .carousel-inner(role='listbox')
+                .item.active
+                    .container
+                        h2.carousel-title
+                            | First Slide
+                .item
+                    .container
+                        h2.carousel-title
+                            | Second Slide
+                .item
+                    .container
+                        h2.carousel-title
+                            | Third Slide
+            // Controls
+            a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                span.sr-only Previous
+            a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                span.sr-only Next
+
+
+    // 3 COL Content
+    .container
+        .row
+            .col-lg-4
+                h2 Safari bug warning!
+                p.text-danger
+                    | As of v9.1.2, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.
+                p
+                    | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                p
+                    a.btn.btn-primary(href='#', role='button') View details »
+            .col-lg-4
+                h2 Heading
+                p
+                    | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                p
+                    a.btn.btn-primary(href='#', role='button') View details »
+            .col-lg-4
+                h2 Heading
+                p
+                    | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                p
+                    a.btn.btn-primary(href='#', role='button') View details »
+
+
+    include partials/footer

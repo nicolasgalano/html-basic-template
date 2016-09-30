@@ -1,0 +1,116 @@
+// *************************************
+//
+//   Mixins
+//
+// *************************************
+
+
+// ----- Background Cover -->
+// ----- @include bck-cover ----- //
+
+@mixin bck-cover {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+
+// ----- Opacity -->
+// ----- @include opacity(.5) ----- //
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+
+// ----- Aspect Ratio -->
+// ----- @include aspect-ratio(16, 9) ----- //
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+    > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+  }
+
+
+// ----- Font -->
+// ----- @include font($Roboto, 24px, 1.25, 500); ----- //
+
+@function calculateRem($size) {
+    $remSize: $size / 10px;
+    @return $remSize * 1rem;
+}
+@mixin font($family, $size, $line-height, $weight: null) {
+    font-family: $family;
+    font-size: $size;
+    font-size: calculateRem($size);
+    line-height: $line-height;
+    @if $weight != null {
+        font-weight: $weight;
+    }
+}
+
+
+// ----- Absolute Centering, any or both axis -->
+// ----- @include absolute-center($axis: "y") ----- //
+
+@mixin absolute-center($axis: "both"){
+    position:absolute;
+    z-index: 100;
+    @if $axis == "y"{
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+    @if $axis == "x"{
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+    @if $axis == "both"{
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+    }
+}
+
+
+// ----- Block Links ----- //
+
+@mixin block-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+
+// -------------------------------------
+//   Testing styles
+// -------------------------------------
+
+// -----  Border color -->
+// ----- @include border(red) ----- //
+
+@mixin border($color) {
+    border: 1px solid $color !important;
+}

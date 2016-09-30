@@ -1,0 +1,106 @@
+// *************************************
+//
+//   Config
+//   -> Variables
+//
+// *************************************
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables.scss";
+
+// -------------------------------------
+//   Typography
+// -------------------------------------
+
+$font-text: Arial, Helvetica, sans-serif;
+$font-title: Arial, Helvetica, sans-serif;
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+$color-red: #ec2a3a;
+$color-gray-dark: #202020;
+$color-gray: #7f848a;
+$color-gray-light: #d7d7d7;
+$color-black: #000;
+$color-white: #fff;
+$color-green-light: #99ddc8;
+
+$color-title: #455562;
+$color-text: #7f848a;
+$color-input: #656c73;
+
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+
+$smooth: .2s all ease-in;
+$smooth-slow: .4s all ease-in;
+
+// -------------------------------------
+//   Spacing in % (from Bootstrap 4 --> .m-t-5 / .p-l-1 / .m-x-0 / .m-x-auto)
+// -------------------------------------
+
+// SPACING
+// m = margin
+// p = padding
+// a = All sides
+// t, r, b, l = top, right, bottom, left
+// x, y = axes horizontal and vertical
+
+$spacer:   1% !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+        0: (
+                x: 0,
+                y: 0
+        ),
+        1: (
+                x: $spacer-x,
+                y: $spacer-y
+        ),
+        2: (
+                x: ($spacer-x * 1.5),
+                y: ($spacer-y * 1.5)
+        ),
+        3: (
+                x: ($spacer-x * 3),
+                y: ($spacer-y * 3)
+        ),
+        4: (
+                x: ($spacer-x * 4),
+                y: ($spacer-y * 4)
+        ),
+        5: (
+                x: ($spacer-x * 5),
+                y: ($spacer-y * 5)
+        ),
+        6: (
+                x: ($spacer-x * 6),
+                y: ($spacer-y * 6)
+        ),
+        7: (
+                x: ($spacer-x * 7),
+                y: ($spacer-y * 7)
+        ),
+        8: (
+                x: ($spacer-x * 8),
+                y: ($spacer-y * 8)
+        ),
+        9: (
+                x: ($spacer-x * 9),
+                y: ($spacer-y * 9)
+        ),
+        10: (
+                x: ($spacer-x * 10),
+                y: ($spacer-y * 10)
+        )
+) !default;
+
+// -------------------------------------
+//   Fixed Top z-index
+// -------------------------------------
+
+$zindex-navbar-fixed: 100;

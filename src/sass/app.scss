@@ -1,0 +1,43 @@
+// *************************************
+//
+//   Modular Sass
+//   -> Manifest
+//
+// *************************************
+//
+
+@import
+
+// -------------------------------------
+//   Vendor
+// -------------------------------------
+    'vendor/bootstrap',
+
+// -------------------------------------
+//   Foundation
+// -------------------------------------
+    'foundation/config',
+    'foundation/mixins',
+    'foundation/base',
+    'foundation/utilities',
+    'foundation/typography',
+
+// -------------------------------------
+//   Structure
+// -------------------------------------
+    'structures/header',
+    'structures/navbar',
+    'structures/footer',
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+    'components/icons',
+    'components/buttons',
+    'components/carousel',
+    'components/forms',
+
+// -------------------------------------
+//   Others
+// -------------------------------------
+    'shame.scss';
