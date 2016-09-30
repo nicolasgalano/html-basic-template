@@ -8,3 +8,8 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 - Sass: https://www.npmjs.com/package/gulp-sass
 - Autoprefixer: https://www.npmjs.com/package/autoprefixer
 - Gulp-PostCSS: https://www.npmjs.com/package/gulp-postcss
+
+# Install and compile
+$npm install
+
+$gulp watch
