@@ -11,26 +11,26 @@ nav.navbar.navbar-default
             a.navbar-brand(href='#') Project name
         #navbar.collapse.navbar-collapse
             ul.nav.navbar-nav
-                li.active
-                    a(href='#') Home
-                li
-                    a(href='#about') About
-                li
-                    a(href='#contact') Contact
-                li.dropdown
+                li.navbar-item.active
+                    a.navbar-link(href='#') Home
+                li.navbar-item
+                    a.navbar-link(href='#about') About
+                li.navbar-item
+                    a.navbar-link(href='#contact') Contact
+                li.navbar-item.dropdown
                     a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                         | Dropdown
                         span.caret
                     ul.dropdown-menu
-                        li
-                            a(href='#') Action
-                        li
-                            a(href='#') Another action
-                        li
-                            a(href='#') Something else here
+                        li.dropdown-menu-item
+                            a.dropdown-menu-link(href='#') Action
+                        li.dropdown-menu-item
+                            a.dropdown-menu-link(href='#') Another action
+                        li.dropdown-menu-item
+                            a.dropdown-menu-link(href='#') Something else here
                         li.divider(role='separator')
                         li.dropdown-header Nav header
-                        li
-                            a(href='#') Separated link
-                        li
-                            a(href='#') One more separated link
+                        li.dropdown-menu-item
+                            a.dropdown-menu-link(href='#') Separated link
+                        li.dropdown-menu-item
+                            a.dropdown-menu-link(href='#') One more separated link
