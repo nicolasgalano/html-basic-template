@@ -1,0 +1,9 @@
+{
+  "app_files": {
+    "js": [],
+    "pug": [ "src/pug/**/*.pug",
+             "!src/pug/partials/**/*.pug"
+           ],
+    "sass": ["src/sass/app.scss"]
+  }
+}

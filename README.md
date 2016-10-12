@@ -4,8 +4,8 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 
 ## Requirements
 
-* npmjs - [Install](https://docs.npmjs.com/getting-started/installing-node)
-* Composer - [Install](https://getcomposer.org/download/)
+* Node - [Install](https://nodejs.org/en/download/)
+* npm - [Install](https://docs.npmjs.com/getting-started/installing-node)
 
 
 ## Resources
@@ -16,7 +16,8 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 - [Sass](https://www.npmjs.com/package/gulp-sass)
 - [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
 - [Gulp-PostCSS](https://www.npmjs.com/package/gulp-postcss)
-
+- [Jquery](http://api.jquery.com/)
+- [Jquery Validation](https://jqueryvalidation.org/documentation/)
 
 ## Local setup
 
@@ -33,10 +34,11 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 	$ cd [project-name]
 	```
 
-3. **Run Composer**
+3. **Install JS dependencies**
 	```shell
 	# @ root-folder/
-	$ composer install --ignore-platform-reqs
+	$ npm install -g gulp-cli
+	$ npm install
 	```
 
 4. **Run Gulp watch**
