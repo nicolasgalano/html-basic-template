@@ -1,18 +1,12 @@
 // *************************************
 //
-//   Utility classes
+//   Utilities
 //
 // *************************************
 
-
 // -------------------------------------
-//   Flexbox columns
+//   BassCSS - http://www.basscss.com/
 // -------------------------------------
-
-.flexbox {
-  display: flex;
-}
-
 
 // -------------------------------------
 //   Circle image w/ padding
@@ -45,21 +39,6 @@
 //   Display
 // -------------------------------------
 
-.display--inline {
-  display: inline !important;
-}
-
-.display--block {
-  display: block !important;
-}
-
-.display--none {
-  display: none !important;
-}
-
-.display--inline-block {
-  display: inline-block !important;
-}
 
 // ----- White Space ----- //
 
@@ -89,6 +68,14 @@
   width: 50% !important;
 }
 
+.w--66 {
+  width: 66.666% !important;
+}
+
+.w--75 {
+  width: 75% !important;
+}
+
 .w--100 {
   width: 100% !important;
 }
@@ -113,6 +100,14 @@
 
 .max-w--50 {
   width: 50% !important;
+}
+
+.max-w--66 {
+  width: 66.666% !important;
+}
+
+.max-w--75 {
+  width: 75% !important;
 }
 
 .max-w--100 {
