@@ -1,4 +1,6 @@
 {
+  "autoprefixerOptions": ["last 5 versions"],
+
   "app_files": {
     "js": [],
     "pug": [ "src/pug/**/*.pug",
@@ -6,4 +8,5 @@
            ],
     "sass": ["src/sass/app.scss"]
   }
+
 }

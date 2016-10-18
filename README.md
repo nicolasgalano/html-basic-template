@@ -4,7 +4,7 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 
 ## Requirements
 
-* Node - [Install](https://nodejs.org/en/download/)
+* Node v4.0+ - [Install](https://nodejs.org/en/download/)
 * npm - [Install](https://docs.npmjs.com/getting-started/installing-node)
 
 
