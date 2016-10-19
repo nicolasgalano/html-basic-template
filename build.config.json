@@ -1,6 +1,11 @@
 {
-  "autoprefixerOptions": ["last 5 versions"],
-
+  "autoprefixer_options": ["last 5 versions"],
+  "sass_lint": {
+    "src": "src/sass/**/*.scss",
+    "options": {
+      "config-file": ".sass-lint.yml"
+    }
+  },
   "app_files": {
     "js": [],
     "pug": [ "src/pug/**/*.pug",

@@ -20,13 +20,13 @@
 
 .rounded-img {
   position: relative;
-  border-radius: 50%;
   overflow: hidden;
+  border-radius: 50%;
   transform: translateY(0);
   &:before {
-    content: '';
     display: block;
     padding-top: 100%;
+    content: '';
   }
   img {
     position: absolute;

@@ -8,10 +8,11 @@ var plumber = require('gulp-plumber');
 var rev = require('gulp-rev');
 var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
+var sassLint = require('gulp-sass-lint');
 
 /** TODO add:
  * gulp-rev | done
- * gulp-sass-lint
+ * gulp-sass-lint | done
  * gulp-livereload
  * */
 
@@ -40,7 +41,7 @@ gulp.task('sass', function () {
   return gulp.src(build.app_files.sass)
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
-      .pipe(autoprefixer( build.autoprefixerOptions ))
+      .pipe(autoprefixer( build.autoprefixer_options ))
       .pipe(rev())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('./css'))
@@ -48,15 +49,28 @@ gulp.task('sass', function () {
       .pipe(gulp.dest('./css'));
 });
 
+/**
+ * Different gulp task for the sass-lint
+ * because in order to include all the scss files
+ * a wildcard is necessary in the gulp.src
+ **/
+gulp.task('sass-lint', function () {
+   return gulp.src( build.sass_lint.src )
+       .pipe(sassLint(build.sass_lint.options))
+       .pipe(sassLint.format())
+       .pipe(sassLint.failOnError())
+});
 
 gulp.task('default', function(callback){
-    runSequence('sass',
+    runSequence('sass-lint',
+                'sass',
                 'templates',
                 callback);
 });
 
 gulp.task('watch', function(){
-    runSequence('sass',
+    runSequence('sass-lint',
+        'sass',
         'templates',
         function(){
             var pugWatcher = gulp.watch('src/pug/**/*.pug', ['templates']);
@@ -64,7 +78,8 @@ gulp.task('watch', function(){
                 console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
             });
             var sassWatcher = gulp.watch('src/sass/**/*.scss', function(){
-                runSequence('sass',
+                runSequence('sass-lint',
+                    'sass',
                     'templates'
                     );
             });
