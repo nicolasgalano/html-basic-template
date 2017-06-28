@@ -1,10 +1,25 @@
-// *************************************
+// Mobomo Buttons
 //
-//   Buttons
-//   -> Bootstrap Button Overrides
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
 //
-// *************************************
+//
+// Base styles & states
+//
+// :hover       - Hover state.
+// :active      - Active state.
+// .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
+//
+// Markup:
+// <button type="submit" class="btn btn-primary {{modifier_class}}">Button</button>
+// <button type="submit" class="btn {{modifier_class}}">Button</button>
+//
+// Styleguide 1
 
 .btn {
-
+  height: 4em; 
 }
+.btn:active {
+  color: #ff9000; 
+}
+
