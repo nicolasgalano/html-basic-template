@@ -1,0 +1,17 @@
+{
+  "title"        : "Custom Styleguide",
+  "mask"         : "*.scss",
+  "placeholder"  : "[modifier]",
+ 
+"//": "relative to this file.",
+  "builder"      : "node_modules/michelangelo/kss_styleguide/custom-template/",
+  "source"       : "src/sass",
+  "destination"  : "kss_mobomo",
+ 
+"//": "relative to source.",
+  "homepage"     : "homepage.md",
+ 
+"//": "relative to the generated style guide.",
+  "css": "../css/app.css",
+  "js" : []
+}

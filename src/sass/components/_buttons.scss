@@ -1,8 +1,7 @@
-// Mobomo Buttons
+// Buttons
 //
 // Button styles can be applied to anything with the `.btn` class applied.
 // However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
-//
 //
 // Base styles & states
 //
@@ -17,9 +16,10 @@
 // Styleguide 1
 
 .btn {
-  height: 4em; 
+    height: 4em;
 }
+
 .btn:active {
-  color: #ff9000; 
+    color: #ff9000;
 }
 

@@ -1,0 +1,129 @@
+$kss-markdown-headings-color: $cowabunga;
+
+
+.kss-markdown {
+    max-width: 1100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    ul,
+    ol,
+    dl,
+    dd,
+    blockquote,
+    hr,
+    table,
+    form,
+    fieldset,
+    figure,
+    pre,
+    address,
+    a,
+    p,
+    h1, h2, h3, h4, h5, h6 {
+        color: $black;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Work Sans', sans-serif;
+        line-height: 1.2;
+    }
+
+    a {
+        color: $blue;
+        font-size: rem(16px);
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+        color: lighten($blue, 15%);
+        outline: 0;
+    }
+
+    h1 {
+        color: $kss-markdown-headings-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -.02em;
+    }
+    h2 {
+        color: $kss-markdown-headings-color;
+        font-weight: 500;
+        margin-top: rem(48px);
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        margin-top: rem(24px);
+    }
+
+    h1 { font-size: rem(36px); }
+    h2 { font-size: rem(28px); }
+    h3 { font-size: rem(22px); }
+    h4 { font-size: rem(20px); }
+    h5 { font-size: rem(18px); }
+    h6 { font-size: rem(16px); }
+
+    ol,
+    ul,
+    p {
+        font-size: rem(16px);
+        margin-bottom: rem(24px);
+    }
+
+    ol,
+    ul {
+        font-size: rem(16px);
+        list-style-position: outside;
+        padding-left: 40px;
+    }
+
+    ol { list-style-type: decimal; }
+
+    ul { list-style-type: circle; }
+
+    img,
+    video,
+    audio,
+    embed,
+    object {
+        display: block;
+        max-width: 100%;
+    }
+
+    audio,
+    canvas,
+    img,
+    video { vertical-align: middle; }
+
+    hr {
+        border: 0;
+        border-top: 1px solid $gray;
+        box-sizing: border-box;
+        display: block;
+        height: 1px;
+        margin-bottom: rem(24px);
+        margin-top: rem(23px);
+        padding: 0;
+    }
+
+    pre,
+    pre[class*=language-] {
+        background: #F5F5F5;
+        border: 1px solid $gray;
+        overflow: auto;
+        padding: 1em;
+    }
+
+    code {
+        background: #F5F5F5;
+        padding: 2px 5px;
+    }
+}
