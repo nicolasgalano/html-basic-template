@@ -45,14 +45,14 @@ options.styleGuide = {
   mask: /\.less|\.sass|\.scss|\.styl|\.stylus/,
   destination: options.rootPath.styleGuide,
   // HERE we can add our own builder, or use the bootstrap one? added below as example. 
-  // We should also include it in the node_modules dir.
-  //builder: 'builder/twig',
+  // We should also include it in the repo so its cloned along with the other resources.
+  builder: 'kss_mobomo',
 
   // The css and js paths are URLs, like '/misc/jquery.js'.
   // The following paths are relative to the generated style guide.
   css: [
     path.relative(options.rootPath.styleGuide, options.theme.css + 'app.css'),
-    path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/chroma-kss-styles.css'),
+    //path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/chroma-kss-styles.css'),
     //path.relative(options.rootPath.styleGuide, options.theme.css + 'style-guide/kss-only.css')
   ],
   js: [
