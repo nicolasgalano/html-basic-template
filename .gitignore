@@ -3,5 +3,6 @@
 .idea
 .DS_Store
 node_modules
-css
 *.html
+/css/app.css
+*.scssc
