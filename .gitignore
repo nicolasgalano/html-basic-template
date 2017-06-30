@@ -1,6 +1,7 @@
 *.xml
 *.iml
 .idea
+*.swp
 .DS_Store
 node_modules
 *.html

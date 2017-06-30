@@ -10,11 +10,11 @@ var gulp         = require('gulp'),
     notify       = require('gulp-notify'),
     plumber      = require('gulp-plumber'),
     path         = require('path'),
+	kss 		 = require('kss'); // kss-node 3.0.0-beta1 and later.
     options      = {};
 
 /** TODO add:
  * gulp-rev
- * gulp-sass-lint
  * gulp-livereload
  * */
 
@@ -62,7 +62,9 @@ options.styleGuide = {
   title: 'Test KSS gulp =^..^='
 };
 
-
+// #########################
+// Gulp tasks
+// #########################
 var build = require('./build.config.json');
 
 gulp.task('templates', function buildHTML() {
@@ -85,9 +87,6 @@ gulp.task('autoprefixer', function () {
         .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
 });
 
-// #########################
-// Lint Sass.
-// #########################
 gulp.task('lint', ['lint:sass']);
 
 // Lint Sass.
@@ -105,11 +104,23 @@ gulp.task('lint:sass-with-fail', function () {
     .pipe($.sassLint.failOnError());
 });
 
+gulp.task('sgBuilder', function() {
+  // StyleGuide Builder CSS Assets
+  gulp.src(['kss_mobomo/kss-assets/css/*.scss'])
+  	.pipe($.sass())
+    .pipe($.concat('kss.css'))
+    .pipe(gulp.dest('styleguide/kss-assets/css'))
+});
+
+gulp.task('styleguide', function() {
+  return kss(options.styleGuide)
+});
+
 // #########################
 // Gulp Default and Watch
 // #########################
 gulp.task('default', ['templates', 'sass']);
-gulp.task('watch', ['templates', 'sass','styleguide'], function(){
+gulp.task('watch', ['templates', 'sass','styleguide','sgBuilder'], function(){
     var jadeWatcher = gulp.watch('src/pug/**/*.pug', ['templates']);
     jadeWatcher.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -119,7 +130,12 @@ gulp.task('watch', ['templates', 'sass','styleguide'], function(){
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 
-	var styleguideWatcher = gulp.watch('src/sass/**/*.scss', ['styleguide']);
+    var builderWatcher = gulp.watch(['kss_mobomo/kss-assets/css/*.scss'], ['sgBuilder']);
+    builderWatcher.on('change', function(event) {
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
+
+	var styleguideWatcher = gulp.watch(['src/sass/**/*.scss', 'kss_mobomo/kss-assets/css/*.scss'], ['styleguide']);
     styleguideWatcher.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
@@ -133,12 +149,6 @@ gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function () 
   ], options.gulpWatchOptions, ['styleguide', 'lint:sass']);
 });
 
-// kss-node 3.0.0-beta1 and later.
-var kss = require('kss');
-
-gulp.task('styleguide', function() {
-  return kss(options.styleGuide);
-});
 // #########################
 // Task for styleguide debug
 // #########################
