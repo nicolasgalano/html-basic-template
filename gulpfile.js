@@ -119,7 +119,7 @@ gulp.task('watch', ['templates', 'sass','styleguide'], function(){
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 
-	var styleguideWatcher = gulp.watch('src/sass/**/*.scss', ['sass']);
+	var styleguideWatcher = gulp.watch('src/sass/**/*.scss', ['styleguide']);
     styleguideWatcher.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
