@@ -4,3 +4,105 @@
 // -> Bootstrap Form Overrides
 //
 // *************************************
+
+// Forms
+//
+// <span class="kss-section__description--src">`src/sass/components/_forms.scss`</span>
+//
+// Button styles can be applied to anything with the `.btn` class applied.
+// However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 2
+
+
+/* ----------------------------------- */
+
+
+
+// Inputs
+//
+// Standard text input.
+//
+// :hover    - Highlight the text box when hovering
+// :focus    - Similar to `:hover`, however it should demand more attention than when an input is simply hovered.
+// :disabled - When disabled, the input's appearance should reflect as such.
+//
+// Markup: <input type="text" class="{{modifier_class}}" value="Text input"/>
+//
+// Style guide: 2.1
+
+input[type='text'] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+
+    &:hover {
+        border-color: #bbb;
+    }
+
+    &:focus {
+        border-color: #31b0d5;
+    }
+
+    &:disabled {
+        border-color: #ccc;
+        background-color: #eee;
+        color: #999;
+    }
+}
+
+
+
+// Labels
+//
+// All labelled text boxes should be included in a wrapper `<div>` element for both layout convenience and specific styling.
+//
+// .disabled  - Use this class when the text input inside is expected to be disabled.
+// .invalid   - Use this class if the input has failed a validation check.
+// .valid     - Use this class if the input has passed a validation check (intended for live validation in particular).
+//
+// Markup:
+// <div class="mod-input text {{modifier_class}}">
+//   <label>Text Label</label>
+//   {{> "2.1" modifier_class=""}}
+// </div>
+//
+// Style guide: 2.2
+
+.mod-input {
+    position:relative;
+    display:block;
+
+    &>label {
+        width: 100px;
+        font-weight: bold;
+    }
+
+    &.disabled {
+        color: #888;
+        input {
+            border-color: #ccc;
+            background-color: #eee;
+            color: #999;
+        }
+    }
+
+    &.invalid {
+        label {
+            color: #911;
+        }
+        input {
+            border-color: #e65;
+            background-color: #fdd;
+        }
+    }
+    &.valid {
+        label {
+            color: #191;
+        }
+        input {
+            border-color: #6e5;
+            background-color: #dfd;
+        }
+    }
+}

@@ -59,7 +59,7 @@ options.styleGuide = {
   ],
 
   homepage: 'homepage.md',
-  title: 'Test KSS gulp =^..^='
+  title: 'Styleguide Menu'
 };
 
 // #########################

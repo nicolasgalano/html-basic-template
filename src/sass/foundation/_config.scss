@@ -1,18 +1,53 @@
 // Settings
 //
+// <span class="kss-section__description--src">`src/sass/foundation/_config.scss`</span>
+//
 // The preprocessor variables are the globally-available settings or configuration switches for our project.
 //
+// Styleguide 4
+
+
+/* ----------------------------------- */
+
+
+// Colors
+//
+// Project palette, primary and secondary colors.
+//
+// Styleguide 4.1
+
+
+/* ----------------------------------- */
+
+
+
 // Primary Colors
 //
-// The primary colors for branding.
+// Primary colors for branding
 //
-// $leonardo      -  #2980b9, Leader blue
-// $donatello     -  #8e44ad, Purple tech
-// $raphael       -  #c0392b, Sai
-// $michelangelo  -  #E87E04, Cowabunga
-// $splinter      -  #FDE3A7
+// $color-red           -  #ec2a3a, Red
+// $color-gray-dark     -  #202020, Dark Gray
+// $color-gray          -  #7f848a, Medium Gray
+// $color-gray-light    -  #d7d7d7, Light Gray
+// $color-green-light   -  #99ddc8, Light Green
 //
-// Styleguide Settings.Colors
+// Styleguide 4.1.1
+
+
+/* ----------------------------------- */
+
+
+// Secondary Colors
+//
+// Alternative color palette
+//
+// $color-red           -  #ec2a3a, Red
+// $color-gray-dark     -  #202020, Dark Gray
+// $color-gray          -  #7f848a, Medium Gray
+// $color-gray-light    -  #d7d7d7, Light Gray
+// $color-green-light   -  #99ddc8, Light Green
+//
+// Styleguide 4.1.2
 
 
 
@@ -56,6 +91,7 @@ $color-input: #656c73;
 
 $smooth: .2s all ease-in;
 $smooth-slow: .4s all ease-in;
+
 
 // -------------------------------------
 //   Spacing in % (from Bootstrap 4 --> .m-t-5 / .p-l-1 / .m-x-0 / .m-x-auto)

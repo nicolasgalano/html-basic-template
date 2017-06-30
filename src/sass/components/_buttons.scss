@@ -1,25 +1,67 @@
 // Buttons
 //
+// <span class="kss-section__description--src">src/sass/components/_buttons.scss</span>
+//
 // Button styles can be applied to anything with the `.btn` class applied.
 // However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+//
+// Styleguide 1
+
+
+
+/* ----------------------------------- */
+
+
+
+// Default styles
 //
 // Base styles & states
 //
 // :hover       - Hover state.
-// :active      - Active state.
 // .disabled    - Disabled button. If you use `<button>` element, that is acceptable to add `disabled` attribute instead.
 //
 // Markup:
 // <button type="submit" class="btn btn-primary {{modifier_class}}">Button</button>
 // <button type="submit" class="btn {{modifier_class}}">Button</button>
 //
-// Styleguide 1
+//
+// Styleguide 1.1
 
 .btn {
-    height: 4em;
+    padding: 10px 15px;
+    transition: $smooth;
+    &:active {
+        color: #ff9000;
+    }
+    &.disabled {
+        background-color: #ddd;
+        color: #999;
+        border-color: #ddd;
+    }
 }
 
-.btn:active {
-    color: #ff9000;
-}
+
+
+/* ----------------------------------- */
+
+
+
+// Bootstrap
+//
+// Bootstrap buttons default styles.
+//
+// .btn-default - Bootstrap default
+// .btn-primary - Bootstrap default
+// .btn-success - Bootstrap default
+// .btn-info - Bootstrap default
+// .btn-warning - Bootstrap default
+// .btn-danger - Bootstrap default
+//
+// Markup:
+// <button type="submit" class="btn btn-primary {{modifier_class}}">Button</button>
+// <button type="submit" class="btn {{modifier_class}}">Button</button>
+//
+// Style guide 1.2
+
+
 

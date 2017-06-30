@@ -4,9 +4,21 @@
 //
 // *************************************
 
+// Mixins
+//
+// Set of mixins
+//
+// Styleguide 3
 
 // ----- Background Cover -->
 // ----- @include bck-cover ----- //
+
+// Creates a linear gradient background, from top to bottom.
+//
+// $start - The color hex at the top.
+// $end   - The color hex at the bottom.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
 
 @mixin bck-cover {
   background-repeat: no-repeat;
