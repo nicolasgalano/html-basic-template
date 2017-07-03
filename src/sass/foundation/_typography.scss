@@ -5,6 +5,25 @@
 //
 // *************************************
 
+
+
+// Typography
+//
+// Font styles
+//
+// Markup:
+// <h1>H1 - Lorem ipsum dolor amet.</h1>
+// <h2>H2 - Lorem ipsum dolor amet.</h2>
+// <h3>H3 - Lorem ipsum dolor amet.</h3>
+// <h4>H4 - Lorem ipsum dolor amet.</h4>
+// <h5>H5 - Lorem ipsum dolor amet.</h5>
+// <p>Lorem ipsum dolor amet.</p>
+// <p class="small">Lorem ipsum dolor amet.</p>
+//
+// Styleguide 1.2
+
+
+
 // -------------------------------------
 //   Google Fonts
 // -------------------------------------
@@ -28,12 +47,36 @@ body {
 
 h1, h2, h3, h4 {
     font-family: $font-title;
+    line-height: 1.2;
     margin: 20px 0;
     max-width: 90%;
+    color: $color-title;
+    &.red {
+        color: $color-red;
+    }
+    &.blue {
+        color: $color-blue;
+    }
+}
+
+h1 {
+    font-size: 42px;
 }
 
 h2 {
-    @include font($font-title, 36px, 1.2em);
-    color: $color-title;
+    font-size: 36px;
 }
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 21px;
+}
+
 

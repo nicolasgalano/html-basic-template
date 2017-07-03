@@ -12,7 +12,7 @@
 // Button styles can be applied to anything with the `.btn` class applied.
 // However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
 //
-// Styleguide 2
+// Styleguide 3
 
 
 /* ----------------------------------- */
@@ -29,7 +29,7 @@
 //
 // Markup: <input type="text" class="{{modifier_class}}" value="Text input"/>
 //
-// Style guide: 2.1
+// Style guide: 3.1
 
 input[type='text'] {
     border: 1px solid #ddd;
@@ -67,7 +67,7 @@ input[type='text'] {
 //   {{> "2.1" modifier_class=""}}
 // </div>
 //
-// Style guide: 2.2
+// Style guide: 3.2
 
 .mod-input {
     position:relative;

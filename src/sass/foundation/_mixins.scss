@@ -4,11 +4,6 @@
 //
 // *************************************
 
-// Mixins
-//
-// Set of mixins
-//
-// Styleguide 3
 
 // ----- Background Cover -->
 // ----- @include bck-cover ----- //
@@ -24,6 +19,13 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+}
+
+@mixin border-radius($args...) {
+    -webkit-border-radius: $args;
+    -moz-border-radius: $args;
+    -ms-border-radius: $args;
+    border-radius: $args;
 }
 
 
