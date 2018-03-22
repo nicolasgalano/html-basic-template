@@ -42,10 +42,10 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 	$ npm install
 	```
 
-4. **Run Gulp watch**
+4. **Run Gulp serve**
 	```shell
 	# @ root-folder/
-	$ gulp watch
+	$ gulp serve
 	```
 
 5. **KSS styleguide**
