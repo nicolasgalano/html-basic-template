@@ -11,7 +11,7 @@ This is a blank template for each project that uses Bootstrap, Sass, Pug (ex-Jad
 ## Resources
 
 - [MVCSS](http://mvcss.io/)
-- [Bootstrap(Sass)](http://getbootstrap.com/css/#sass) / [package](https://www.npmjs.com/package/bootstrap-sass)
+- [Bootstrap(Sass)](https://getbootstrap.com/docs/4.0/getting-started/download/#npm)
 - [Pug](https://www.npmjs.com/package/gulp-pug)
 - [Sass](https://www.npmjs.com/package/gulp-sass)
 - [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
