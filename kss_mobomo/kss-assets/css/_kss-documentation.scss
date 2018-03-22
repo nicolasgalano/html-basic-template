@@ -61,24 +61,24 @@ $kss-modifiers-name-color: $cowabunga;
     margin: 0;
     margin-bottom: 5px;
     color: $kss-section-item-color;
-    font-size: rem(36px);
+    font-size: 36px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 
     &--depth-2 {
-        font-size:rem(30px);
+        font-size:30px;
         margin-bottom: 25px;
         //border-bottom: 1px solid $kss-section-item-color;
         //padding-bottom: 20px;
     }
 
-    &--depth-3 { font-size:rem(24px); }
+    &--depth-3 { font-size:24px; }
 
-    &--depth-4 { font-size:rem(20px); }
+    &--depth-4 { font-size:20px; }
 
-    &--depth-5 { font-size:rem(18px); }
+    &--depth-5 { font-size:18px; }
 
-    &--depth-6 { font-size:rem(16px); }
+    &--depth-6 { font-size:16px; }
 }
 
 .kss-section__ref {
@@ -110,7 +110,7 @@ $kss-modifiers-name-color: $cowabunga;
 
 .kss-parameters__description {
     margin: 0;
-    font-size: rem(16px);
+    font-size: 16px;
     line-height: 1.7;
 }
 
@@ -143,7 +143,7 @@ $kss-modifiers-name-color: $cowabunga;
     ul,
     p {
         margin: 0;
-        font-size: rem(16px);
+        font-size: 16px;
     }
 
     a {
@@ -165,7 +165,7 @@ $kss-modifiers-name-color: $cowabunga;
     }
 
     &--src {
-        font-size: rem(13px);
+        font-size: 13px;
         //font-style: italic;
         color: #888;
         //background-color: #eee;
@@ -185,7 +185,7 @@ $kss-modifiers-name-color: $cowabunga;
 .kss-section__source {
     margin: 0;
     color: darken($gray, 30%);
-    font-size: rem(14px);
+    font-size: 14px;
 }
 
 .kss-section__modifiers {
@@ -203,7 +203,7 @@ $kss-modifiers-name-color: $cowabunga;
     margin: 0;
     margin-bottom: 20px;
     font-family: 'Work Sans', sans-serif;
-    font-size: rem(21px);
+    font-size: 21px;
     font-weight: 300;
     color: $kss-modifiers-name-color;
     text-transform: uppercase;
@@ -213,7 +213,7 @@ $kss-modifiers-name-color: $cowabunga;
 .kss-modifiers__name {
     margin: 0;
     margin-bottom: 5px;
-    font-size: rem(16px);
+    font-size: 16px;
     font-weight: 600;
     color: $kss-modifiers-heading-color;
     display: inline-block;
@@ -223,7 +223,7 @@ $kss-modifiers-name-color: $cowabunga;
 .kss-modifiers__description {
     margin: 0;
     font-family: Arial, sans-serif;
-    font-size: rem(13px);
+    font-size: 13px;
     display: inline-block;
     color: $kss-modifiers-heading-color;
 }

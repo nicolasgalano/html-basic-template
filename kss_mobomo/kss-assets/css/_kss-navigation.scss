@@ -14,6 +14,7 @@ $kss-nav-item-link-active: $cowabunga;
     color: $black;
     background: #eee;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     font-weight: 400;
     transform: translateX(-100%);
     transition: transform 0.3s ease-out;
@@ -67,7 +68,7 @@ $kss-nav-item-link-active: $cowabunga;
     box-sizing: border-box;
     padding: 5px 20px 8px;
     color: $black;
-    font-size: rem(16px);
+    font-size: 16px;
     font-weight: 400;
     text-decoration: none;
     transition: color 0.3s;
@@ -105,14 +106,19 @@ $kss-nav-item-link-active: $cowabunga;
     list-style-type: none;
 
     .kss-nav__item a {
-        padding: 2px 10px;
+        padding: 4px 10px;
         padding-left: 30px;
-        font-size: rem(14px);
+        font-size: 14px;
         font-weight: 300;
     }
 
     .kss-nav__item--grandchild a {
         padding-left: 40px;
-        font-size: rem(12px);
+        padding-top: 5px;
+        padding-bottom: 8px;
+        font-size: 13px;
+        span {
+            font-weight: 600;
+        }
     }
 }

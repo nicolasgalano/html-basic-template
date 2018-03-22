@@ -5,6 +5,7 @@ var gulp         = require('gulp'),
     $            = require('gulp-load-plugins')(),
     pug          = require('gulp-pug'),
     sass         = require('gulp-sass'),
+    browserSync  = require('browser-sync').create(),
     postcss      = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     notify       = require('gulp-notify'),
@@ -13,15 +14,12 @@ var gulp         = require('gulp'),
 	kss 		 = require('kss'); // kss-node 3.0.0-beta1 and later.
     options      = {};
 
-/** TODO add:
- * gulp-rev
- * gulp-livereload
- * */
 
 //KSS styleguide
 // #############################
 // Editable paths and options.
 // #############################
+
 options.rootPath = {
   project     : __dirname + '/',
   styleGuide  : __dirname + '/styleguide/',
@@ -62,9 +60,12 @@ options.styleGuide = {
   title: 'Styleguide Menu'
 };
 
+
 // #########################
 // Gulp tasks
 // #########################
+
+
 var build = require('./build.config.json');
 
 gulp.task('templates', function buildHTML() {
@@ -97,6 +98,7 @@ gulp.task('lint:sass', function () {
 });
 
 // Lint Sass and throw an error for a CI to catch.
+
 gulp.task('lint:sass-with-fail', function () {
   return gulp.src(options.theme.components + '**/*.scss')
     .pipe($.sassLint())
@@ -104,43 +106,57 @@ gulp.task('lint:sass-with-fail', function () {
     .pipe($.sassLint.failOnError());
 });
 
+// StyleGuide Builder CSS Assets
+
 gulp.task('sgBuilder', function() {
-  // StyleGuide Builder CSS Assets
   gulp.src(['kss_mobomo/kss-assets/css/*.scss'])
   	.pipe($.sass())
     .pipe($.concat('kss.css'))
     .pipe(gulp.dest('styleguide/kss-assets/css'))
+    .pipe(browserSync.stream())
 });
 
 gulp.task('styleguide', function() {
   return kss(options.styleGuide)
 });
 
+
+
 // #########################
-// Gulp Default and Watch
+// Gulp Default, Serve and Watch
 // #########################
+
 gulp.task('default', ['templates', 'sass']);
-gulp.task('watch', ['templates', 'sass','styleguide','sgBuilder'], function(){
-    var jadeWatcher = gulp.watch('src/pug/**/*.pug', ['templates']);
-    jadeWatcher.on('change', function(event) {
+
+
+// Static Server + watching scss/html files
+
+gulp.task('serve', ['sass'], function() {
+    browserSync.init({
+        server: "./"
+    });
+
+    var pugWatcher = gulp.watch('src/pug/**/*.pug', ['templates'])
+    pugWatcher.on('change', browserSync.reload,  function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
-	var sassWatcher = gulp.watch('src/sass/**/*.scss', ['sass']);
-    sassWatcher.on('change', function(event) {
+    var sassWatcher = gulp.watch('src/sass/**/*.scss', ['sass'])
+    sassWatcher.on('change', browserSync.reload, function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 
     var builderWatcher = gulp.watch(['kss_mobomo/kss-assets/css/*.scss'], ['sgBuilder']);
-    builderWatcher.on('change', function(event) {
+    builderWatcher.on('change', browserSync.reload, function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 
-	var styleguideWatcher = gulp.watch(['src/sass/**/*.scss', 'kss_mobomo/kss-assets/css/*.scss'], ['styleguide']);
-    styleguideWatcher.on('change', function(event) {
+    var styleguideWatcher = gulp.watch(['src/sass/**/*.scss', 'kss_mobomo/kss-assets/css/*.scss'], ['styleguide']);
+    styleguideWatcher.on('change', browserSync.reload, function(event) {
         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
-
 });
+
+
 gulp.task('watch:ls', ['templates', 'sass','watch:lint-and-styleguide']);
 gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function () {
   return gulp.watch([
@@ -149,10 +165,13 @@ gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function () 
   ], options.gulpWatchOptions, ['styleguide', 'lint:sass']);
 });
 
+
 // #########################
 // Task for styleguide debug
 // #########################
+
 // Debug the generation of the style guide with the --verbose flag.
+
 gulp.task('styleguide:debug', ['styleguide'], function () {
   options.styleGuide.verbose = true;
   return kss(options.styleGuide);
