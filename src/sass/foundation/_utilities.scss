@@ -180,38 +180,38 @@
 
 .img--responsive {
   width: 100%;
-  @media screen and (min-width: $screen-xs-min) {
+  @include media-breakpoint-up(xs) {
     width: auto;
     margin: 0 auto;
   }
 }
 
 .pull-left--sm-min {
-  @media screen and (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     float: left;
   }
 }
 
 .pull-right--sm-min {
-  @media screen and (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     float: right;
   }
 }
 
 .text-left--sm-min {
-  @media screen and (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     text-align: left;
   }
 }
 
 .text-right--sm-min {
-  @media screen and (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     text-align: right;
   }
 }
 
 .text-right--lg-min {
-  @media screen and (min-width: $screen-lg-min) {
+  @include media-breakpoint-up(lg) {
     text-align: right;
   }
 }
@@ -227,33 +227,6 @@
   margin-right: auto !important;
   margin-left:  auto !important;
 }
-
-// ----- Margin & Padding ----- //
-// ----- (from Bootstrap 4 --> .m-t-5 / .p-l-1 / .m-x-0 / .m-x-auto) -----  //
-
-@each $prop, $abbrev in (margin: m, padding: p) {
-  @each $size, $lengths in $spacers {
-    $length-x:   map-get($lengths, x);
-    $length-y:   map-get($lengths, y);
-
-    .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
-    .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
-    .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
-    .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
-    .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
-
-    // Axes
-    .#{$abbrev}-x-#{$size} {
-      #{$prop}-right:  $length-x !important;
-      #{$prop}-left:   $length-x !important;
-    }
-    .#{$abbrev}-y-#{$size} {
-      #{$prop}-top:    $length-y !important;
-      #{$prop}-bottom: $length-y !important;
-    }
-  }
-}
-
 
 
 

@@ -3,59 +3,73 @@ include partials/head
 body
     include partials/navbar
 
-
-    // SLIDER full width
-    .container-fluid
+    main(role='main')
         #myCarousel.carousel.slide(data-ride='carousel')
             ol.carousel-indicators
                 li.active(data-target='#myCarousel', data-slide-to='0')
                 li(data-target='#myCarousel', data-slide-to='1')
                 li(data-target='#myCarousel', data-slide-to='2')
-            .carousel-inner(role='listbox')
-                .item.active
+            .carousel-inner
+                .carousel-item.active
                     .container
-                        h2.carousel-title
-                            | First Slide
-                .item
+                        h3.carousel-title.text-center First slide
+                        .carousel-caption
+                            h1 Example headline.
+                            p
+                                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            p
+                                a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
+                .carousel-item
                     .container
-                        h2.carousel-title
-                            | Second Slide
-                .item
+                        h3.carousel-title Second slide
+                        .carousel-caption
+                            h1 Another example headline.
+                            p
+                                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            p
+                                a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
+                .carousel-item
                     .container
-                        h2.carousel-title
-                            | Third Slide
-            // Controls
-            a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
-                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                        h3.carousel-title.text-center Third slide
+                        .carousel-caption
+                            h1 One more for good measure.
+                            p
+                                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            p
+                                a.btn.btn-lg.btn-primary(href='#', role='button') Browse gallery
+            a.carousel-control-prev(href='#myCarousel', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
                 span.sr-only Previous
-            a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
-                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+            a.carousel-control-next(href='#myCarousel', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
                 span.sr-only Next
 
 
-    // 3 COL Content
-    .container
-        .row
-            .col-lg-4
-                h2 Safari bug warning!
-                p.text-danger
-                    | As of v9.1.2, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.
-                p
-                    | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                p
-                    a.btn.btn-primary(href='#', role='button') View details »
-            .col-lg-4
-                h2 Heading
-                p
-                    | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                p
-                    a.btn.btn-primary(href='#', role='button') View details »
-            .col-lg-4
-                h2 Heading
-                p
-                    | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
-                p
-                    a.btn.btn-primary(href='#', role='button') View details »
+        .container
+            .row
+                .col-lg-4
+                    img.rounded-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', width='140', height='140')
+                    h2 Heading
+                    p
+                        | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+                    p
+                        a.btn.btn-secondary(href='#', role='button') View details »
+
+                .col-lg-4
+                    img.rounded-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', width='140', height='140')
+                    h2 Heading
+                    p
+                        | Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    p
+                        a.btn.btn-secondary(href='#', role='button') View details »
+
+                .col-lg-4
+                    img.rounded-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', width='140', height='140')
+                    h2 Heading
+                    p
+                        | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    p
+                        a.btn.btn-secondary(href='#', role='button') View details »
 
 
     include partials/footer

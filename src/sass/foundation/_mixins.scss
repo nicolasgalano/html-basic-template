@@ -67,12 +67,12 @@
 
 @function calculateRem($size) {
     $remSize: $size / 10px;
-    @return $remSize * 1rem;
+    @return $remSize * .64rem;
 }
 @mixin font($family, $size, $line-height, $weight: null) {
     font-family: $family;
     font-size: $size;
-    font-size: calculateRem($size);
+    //font-size: calculateRem($size);
     line-height: $line-height;
     @if $weight != null {
         font-weight: $weight;
